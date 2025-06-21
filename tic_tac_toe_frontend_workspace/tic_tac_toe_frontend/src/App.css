@@ -1,10 +1,97 @@
 :root {
-  --base-light: #00ffff;
-  --base-dark: #00008b;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --base-light: #3f51b5;    /* Primary (deep indigo/blue per spec) */
+  --base-dark: #151920;      /* More neutral, modern dark */
+  --accent: #ff9800;         /* Accent (orange) */
+  --secondary: #f5f5f5;      /* Secondary (almost white) */
+  --text-color: #fff;
+  --text-secondary: rgba(255,255,255,0.7);
+  --border-color: rgba(255,255,255,0.1);
 }
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
 
 body {
   margin: 0;
@@ -15,11 +102,181 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
+
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
 
 .navbar {
   background-color: var(--base-dark);
@@ -35,6 +292,91 @@ body {
   z-index: 100;
 }
 
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
+
 .logo {
   font-size: 1.25rem;
   font-weight: 600;
@@ -43,9 +385,179 @@ body {
   gap: 8px;
 }
 
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
+
 .logo-symbol {
   color: var(--base-light);
 }
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
 
 .container {
   max-width: 900px;
@@ -54,6 +566,91 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
 
 .hero {
   padding-top: 120px;
@@ -65,11 +662,181 @@ body {
   gap: 24px;
 }
 
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
+
 .subtitle {
   color: var(--base-light);
   font-weight: 500;
   font-size: 1.1rem;
 }
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
 
 .title {
   font-size: 3.5rem;
@@ -78,6 +845,91 @@ body {
   margin: 0;
 }
 
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
+
 .description {
   font-size: 1.1rem;
   line-height: 1.5;
@@ -85,6 +937,91 @@ body {
   max-width: 600px;
   margin-bottom: 16px;
 }
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
 
 .btn {
   background-color: var(--base-light);
@@ -98,11 +1035,266 @@ body {
   transition: background-color 0.2s ease;
 }
 
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
+
 .btn:hover {
   background-color: #7691ff;
 }
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
 
 .btn-large {
   padding: 12px 24px;
   font-size: 1.1rem;
 }
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 12px 0;
+}
+
+.ttt-cell {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--base-dark);
+  border: 2.5px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.25s;
+}
+.ttt-cell:focus {
+  outline: 2px solid var(--accent);
+}
+.ttt-cell:disabled {
+  color: var(--border-color);
+  background: #1a2533;
+  cursor: not-allowed;
+}
+
+.ttt-message {
+  margin: 14px 0 2px 0;
+  font-size: 1.12rem;
+  min-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.ttt-status-message {
+  margin: 8px 0 0 0;
+  min-height: 30px;
+}
+
+.ttt-input {
+  margin: 4px 0;
+  min-width: 170px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+  background: #23283b;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ttt-input:focus {
+  border-color: var(--accent);
+}
+
+.ttt-join-form, .ttt-start-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 500px) {
+  .ttt-board {
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .ttt-cell {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    border-radius: 8px;
+  }
+}
+
