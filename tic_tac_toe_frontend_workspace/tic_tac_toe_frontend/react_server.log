@@ -7,108 +7,19 @@
 <i> [webpack-dev-server] On Your Network (IPv4): http://172.17.0.2:3000/
 <i> [webpack-dev-server] Content not from webpack is served from './public' directory
 Injecting EditorRootWrapper import: ../.ve/EditorRootWrapper
-asset bundle.js 1.39 MiB [emitted] (name: main)
+asset bundle.js 1.43 MiB [emitted] (name: main)
 asset index.html 1.98 KiB [emitted]
 runtime modules 27.5 KiB 14 modules
 modules by path ./node_modules/ 1.24 MiB 31 modules
-modules by path ./src/ 10.3 KiB
-  modules by path ./src/*.css 7.49 KiB 4 modules
-  modules by path ./src/*.js 2.76 KiB
+modules by path ./src/ 44.7 KiB
+  modules by path ./src/*.css 29.5 KiB 4 modules
+  modules by path ./src/*.js 15.2 KiB
     ./src/index.js 530 bytes [built] [code generated]
-    ./src/App.js 2.24 KiB [built] [code generated]
+    ./src/App.js 14.7 KiB [built] [code generated]
 modules by path ./.ve/ 15.1 KiB
   modules by path ./.ve/*.js 10.6 KiB 2 modules
   modules by path ./.ve/*.css 2.93 KiB
     ./.ve/EditorOverlay.css 2.25 KiB [built] [code generated]
     ./node_modules/css-loader/dist/cjs.js!./.ve/EditorOverlay.css 697 bytes [built] [code generated]
   ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 1483 ms
-assets by status 1.98 KiB [cached] 1 asset
-assets by path *.js 1.4 MiB
-  asset bundle.js 1.39 MiB [emitted] (name: main)
-  asset main.628ce2909b8bf995ff19.hot-update.js 12.3 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.628ce2909b8bf995ff19.hot-update.json 97 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.4 MiB = bundle.js 1.39 MiB main.628ce2909b8bf995ff19.hot-update.js 12.3 KiB
-cached modules 1.26 MiB [cached] 38 modules
-runtime modules 27.5 KiB 14 modules
-javascript modules 569 bytes
-  ./src/index.js 530 bytes [code generated]
-  ./src/App.js 39 bytes [built] [code generated] [1 error]
-
-ERROR in ./src/App.js
-Module build failed (from ./node_modules/babel-loader/lib/index.js):
-SyntaxError: /home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/src/App.js: Unexpected token (285:92)
-
-  283 |             <h1 className="title">Tic Tac Toe</h1>
-  284 |             <div className="description">
-> 285 |               Enter your nickname to <b>start a new game</b> or <b>join an existing game</b.<br/>
-      |                                                                                             ^
-  286 |             </div>
-  287 |
-  288 |             <form className="ttt-start-form" onSubmit={handleStartNewGame}>
-    at constructor (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:363:19)
-    at JSXParserMixin.raise (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:6609:19)
-    at JSXParserMixin.unexpected (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:6629:16)
-    at JSXParserMixin.jsxParseIdentifier (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:4581:12)
-    at JSXParserMixin.jsxParseElementName (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:4604:31)
-    at JSXParserMixin.jsxParseClosingElementAt (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:4691:22)
-    at JSXParserMixin.jsxParseElementAt (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:4707:37)
-    at JSXParserMixin.jsxParseElementAt (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:4710:32)
-    at JSXParserMixin.jsxParseElementAt (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:4710:32)
-    at JSXParserMixin.jsxParseElementAt (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:4710:32)
-    at JSXParserMixin.jsxParseElementAt (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:4710:32)
-    at JSXParserMixin.jsxParseElement (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:4761:17)
-    at JSXParserMixin.parseExprAtom (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:4771:19)
-    at JSXParserMixin.parseExprSubscripts (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:11012:23)
-    at JSXParserMixin.parseUpdate (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10997:21)
-    at JSXParserMixin.parseMaybeUnary (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10977:23)
-    at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10830:61)
-    at JSXParserMixin.parseExprOps (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10835:23)
-    at JSXParserMixin.parseMaybeConditional (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10812:23)
-    at JSXParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10765:21)
-    at /home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10734:39
-    at JSXParserMixin.allowInAnd (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:12361:12)
-    at JSXParserMixin.parseMaybeAssignAllowIn (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10734:17)
-    at JSXParserMixin.parseParenAndDistinguishExpression (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:11608:28)
-    at JSXParserMixin.parseExprAtom (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:11262:23)
-    at JSXParserMixin.parseExprAtom (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:4776:20)
-    at JSXParserMixin.parseExprSubscripts (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:11012:23)
-    at JSXParserMixin.parseUpdate (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10997:21)
-    at JSXParserMixin.parseMaybeUnary (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10977:23)
-    at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10830:61)
-    at JSXParserMixin.parseExprOps (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10835:23)
-    at JSXParserMixin.parseMaybeConditional (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10812:23)
-    at JSXParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10765:21)
-    at JSXParserMixin.parseExpressionBase (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10718:23)
-    at /home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10714:39
-    at JSXParserMixin.allowInAnd (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:12356:16)
-    at JSXParserMixin.parseExpression (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:10714:17)
-    at JSXParserMixin.parseReturnStatement (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:13061:28)
-    at JSXParserMixin.parseStatementContent (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:12716:21)
-    at JSXParserMixin.parseStatementLike (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:12685:17)
-    at JSXParserMixin.parseStatementListItem (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:12665:17)
-    at JSXParserMixin.parseBlockOrModuleBlockBody (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:13235:61)
-    at JSXParserMixin.parseBlockBody (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:13228:10)
-    at JSXParserMixin.parseBlock (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:13216:10)
-    at JSXParserMixin.parseStatementContent (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:12777:21)
-    at JSXParserMixin.parseStatementLike (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:12685:17)
-    at JSXParserMixin.parseStatementOrSloppyAnnexBFunctionDeclaration (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:12675:17)
-    at JSXParserMixin.parseIfStatement (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:13049:28)
-    at JSXParserMixin.parseStatementContent (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:12714:21)
-    at JSXParserMixin.parseStatementLike (/home/kavia/workspace/code-generation/online-tic-tac-toe-28848-55093ffc/tic_tac_toe_frontend_workspace/tic_tac_toe_frontend/node_modules/@babel/parser/lib/index.js:12685:17)
- @ ./src/index.js 5:0-24 11:32-35
-
-webpack 5.99.9 compiled with 1 error in 79 ms
-assets by status 1.98 KiB [cached] 1 asset
-assets by path *.js 1.48 MiB
-  asset bundle.js 1.43 MiB [emitted] (name: main)
-  asset main.5296774a5d2776d33ebe.hot-update.js 54.3 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.5296774a5d2776d33ebe.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.48 MiB = bundle.js 1.43 MiB main.5296774a5d2776d33ebe.hot-update.js 54.3 KiB
-cached modules 1.26 MiB [cached] 39 modules
-runtime modules 27.5 KiB 14 modules
-javascript modules 39.4 KiB
-  ./src/index.js 530 bytes [code generated]
-  ./src/App.js 14.7 KiB [built] [code generated]
-  ./node_modules/css-loader/dist/cjs.js!./src/App.css 24.2 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 208 ms
+webpack 5.99.9 compiled successfully in 1415 ms
